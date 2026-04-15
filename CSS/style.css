@@ -1,98 +1,157 @@
+/* ============================================
+   NAVBAR
+   ============================================ */
 
+/* Fondo general del navbar */
+.navbar {
+  background-color: #1f1a1a !important;
+}
 
+/* Color de los links (Inicio, Productos, Carrito) */
 .navbar .nav-link {
+  color: #f8c146 !important;
   transition: all 0.3s ease;
 }
 
+/* Animación de los links al hacer hover */
+.navbar .nav-link {
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Efecto de subida suave en los links */
 .navbar .nav-link:hover {
   transform: translateY(-2px);
+  color: #ffffff !important;
 }
 
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+/* ============================================
+   HERO / BANNER (CARRUSEL)
+   ============================================ */
+
+/* Altura del carrusel */
+.hero .carousel-item {
+  height: 80vh;
+  margin: auto;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+/* Imagen cubre todo el contenedor */
+.hero .carousel-item img {
+  height: 100%;
+  object-fit: cover;
 }
 
-.btn {
-    border-radius: 7px;
-    background-color: rgb(34, 32, 32);
-    color: #ccc;
-    padding: 10px;
-    cursor: pointer;
+/* Posición relativa para overlay y texto */
+.carousel-item {
+  position: relative;
 }
 
+/* Capa oscura semitransparente sobre la imagen */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Contenedor del texto centrado encima de la imagen */
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+  width: 80%;
+}
+
+/* Título principal del banner */
 .banner-content h1 {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: bold;
   font-size: 70px;
 }
 
+/* Subtítulo del banner */
 .lema-banner {
-    font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
 }
 
-.titulo-productos, .titulo-carrito {
+
+/* ============================================
+   BOTONES
+   ============================================ */
+
+/* Estilo base del botón */
+.btn-banner {
+  border-radius: 7px;
+  background-color: #f8c146;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-banner:hover {
+  background-color: #df6b11;
+  color: #111;
+  transform: translateY(-2px);
+}
+
+/* Botones pequeños (ej: carrito) */
+.btn-sm {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+
+/* ============================================
+   PRODUCTOS
+   ============================================ */
+
+/* Títulos de secciones */
+.titulo-productos,
+.titulo-carrito {
   font-family: 'Bebas Neue', sans-serif;
   margin-top: 50px;
 }
 
-.carousel-item {
-  position: relative;
+/* Animación de las cards al hacer hover */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  z-index: 2;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 1;
-}
-
-.hero .carousel-item {
-  /* height: 80vh; */
-  /* ! Temporal para visualizar la pantalla */
-  height: 20vh;
-
-}
-
-.hero .carousel-item img {
-  height: 100%;
-  object-fit: cover;
+/* Efecto de elevación en las cards */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 
+/* ============================================
+   CARRITO
+   ============================================ */
 
+/* Altura máxima de la lista del carrito con scroll */
 #lista-carrito {
-    max-height: 400px;
-    overflow-y: auto;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
+/* Imágenes dentro del carrito */
 .list-group-item img {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
-.btn-sm {
-    padding: 2px 8px;
-    font-size: 12px;
-}
 
-/* FOOTER */
+/* ============================================
+   FOOTER
+   ============================================ */
 
-  /* Fondo y espaciado general del footer */
+/* Fondo y espaciado general del footer */
 .footer {
   background-color: #1f1a1a;
   color: #fff;
@@ -121,7 +180,7 @@
   margin-bottom: 5px;
 }
 
-/* Estilo base de los enlaces (Inicio, Productos, Carrito, redes sociales) */
+/* Estilo base de los enlaces del footer */
 .footer-link {
   color: #f8c146;
   text-decoration: none;
@@ -130,18 +189,19 @@
   transition: color 0.3s ease;
 }
 
-/* Color dorado al pasar el cursor sobre un enlace */
+/* Color blanco al pasar el cursor sobre un enlace */
 .footer-link:hover {
   color: #ffffff;
 }
 
-/* Color de la línea divisoria horizontal entre el contenido y el copyright */
+/* Línea divisoria horizontal */
 .footer hr {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Texto de copyright "© 2026 Nexus..." - más pequeño y gris */
+/* Texto de copyright */
 .footer .text-center p {
   font-size: 0.9rem;
   color: #bcbcbc;
 }
+

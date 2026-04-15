@@ -1,9 +1,9 @@
-
 let miCarrito = [];
 
 let botonesAgregar = document.querySelectorAll(".agregar");
 let itemsCarrito = document.getElementById("lista-carrito");
 let cantidad = document.getElementById("cantidad");
+let total = document.getElementById("total-carrito");
 let vaciarCarrito = document.getElementById("vaciarCarrito");
 
 let agregraProductos = 0;
@@ -11,36 +11,29 @@ let agregraProductos = 0;
 botonesAgregar.forEach(boton => {
     boton.addEventListener("click", function() {
 
-        const card = this.closest(".card");
-        const nombreProducto = card.querySelector(".producto-nombre").textContent;
-        const imagenProducto = card.querySelector("img").src;
+        const nombre = this.dataset.nombre;
+        const precio = this.dataset.precio;
+        const imagen = this.dataset.img;
 
         let items = itemsCarrito.querySelectorAll("li");
         let encontrado = false;
 
-        // buscar si ya existe
         items.forEach(item => {
-            let nombre = item.querySelector(".nombre-item").textContent;
+            let nombreItem = item.querySelector(".nombre-item").textContent;
 
-            if (nombre === nombreProducto) {
+            if (nombreItem === nombre) {
                 let cantidadItem = item.querySelector(".cantidad-item");
                 cantidadItem.textContent = parseInt(cantidadItem.textContent) + 1;
+                total.textContent = parseFloat(total.textContent) + parseFloat(precio);
                 encontrado = true;
             }
         });
 
         if (encontrado) {
             agregraProductos++;
-            cantidad.textContent = agregraProductos;
+            // cantidad.textContent = agregraProductos;
             return;
         }
-
-        const producto = {
-            nombre: nombreProducto,
-            imagen: imagenProducto
-        };
-
-        miCarrito.push(producto);
 
         const li = document.createElement("li");
 
@@ -52,10 +45,12 @@ botonesAgregar.forEach(boton => {
         );
 
         li.innerHTML = `
-            <img src="${producto.imagen}" width="40">
-            <span class="nombre-item">${producto.nombre}</span>
+            <img src="${imagen}" width="40">
+            <span class="nombre-item">${nombre}</span>
+            <span>$<span class="precio-item">${precio}</span></span>
             <span class="cantidad-item">1</span>
-        `;
+        `;  
+                total.textContent = parseFloat(total.textContent) + parseFloat(precio);
 
         const btnEliminar = document.createElement("button");
         btnEliminar.textContent = "X";
@@ -73,23 +68,26 @@ botonesAgregar.forEach(boton => {
             } else {
                 li.remove();
             }
+                total.textContent = parseFloat(total.textContent) - parseFloat(precio);
+
 
             agregraProductos--;
-            cantidad.textContent = agregraProductos;
+            // cantidad.textContent = agregraProductos;
         });
+
 
         itemsCarrito.append(li);
 
         agregraProductos++;
-        cantidad.textContent = agregraProductos;
-
+        // cantidad.textContent = agregraProductos;
     });
 });
+
+
 
 vaciarCarrito.addEventListener("click", function() {
     miCarrito = [];
     itemsCarrito.innerHTML = "";
     agregraProductos = 0;
-    cantidad.textContent = agregraProductos;
-
+    total.textContent = 0;
 })
