@@ -1,3 +1,5 @@
+
+
 .navbar .nav-link {
   transition: all 0.3s ease;
 }
@@ -86,4 +88,60 @@
 .btn-sm {
     padding: 2px 8px;
     font-size: 12px;
+}
+
+/* FOOTER */
+
+  /* Fondo y espaciado general del footer */
+.footer {
+  background-color: #1f1a1a;
+  color: #fff;
+  padding: 60px 0 25px;
+  margin-top: 60px;
+}
+
+/* Logo "Nexus" - fuente, tamaño y color dorado */
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #f8c146;
+}
+
+/* Textos generales del footer (ej: "Tu tienda deportiva", "Síguenos") */
+.footer p {
+  color: #d1d1d1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* Separación entre cada item de la lista de navegación */
+.footer li {
+  margin-bottom: 5px;
+}
+
+/* Estilo base de los enlaces (Inicio, Productos, Carrito, redes sociales) */
+.footer-link {
+  color: #f8c146;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Color dorado al pasar el cursor sobre un enlace */
+.footer-link:hover {
+  color: #ffffff;
+}
+
+/* Color de la línea divisoria horizontal entre el contenido y el copyright */
+.footer hr {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Texto de copyright "© 2026 Nexus..." - más pequeño y gris */
+.footer .text-center p {
+  font-size: 0.9rem;
+  color: #bcbcbc;
 }
