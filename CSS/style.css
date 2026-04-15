@@ -99,7 +99,7 @@
 .btn-banner {
   border-radius: 7px;
   background-color: #f8c146;
-  color: #ffffff;
+  color: #000000;
   padding: 15px;
   margin-top: 20px;
   display: inline-block;
@@ -109,7 +109,7 @@
 
 .btn-banner:hover {
   background-color: #df6b11;
-  color: #111;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
