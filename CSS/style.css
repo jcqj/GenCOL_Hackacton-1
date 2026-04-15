@@ -34,6 +34,12 @@
    HERO / BANNER (CARRUSEL)
    ============================================ */
 
+
+#carouselBanner {
+  background-color: #111;
+}
+
+
 /* Altura del carrusel */
 .hero .carousel-item {
   height: 80vh;
@@ -94,8 +100,10 @@
   border-radius: 7px;
   background-color: #f8c146;
   color: #ffffff;
-  padding: 10px;
-  cursor: pointer;
+  padding: 15px;
+  margin-top: 20px;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
 }
 
@@ -120,7 +128,7 @@
 .titulo-productos,
 .titulo-carrito {
   font-family: 'Bebas Neue', sans-serif;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 /* Animación de las cards al hacer hover */
@@ -140,14 +148,73 @@
    ============================================ */
 
 /* Altura máxima de la lista del carrito con scroll */
+
+/* Imágenes dentro del carrito */
+
+.titulo-carrito{
+  margin-bottom: 25px;
+}
+
+.carrito .container {
+  max-width: 600px;
+}
+
 #lista-carrito {
   max-height: 400px;
   overflow-y: auto;
 }
 
-/* Imágenes dentro del carrito */
+#vaciarCarrito {
+  margin-top: 10px;
+}
+
+/* item carrito */
+.list-group-item {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+}
+
+/* imagen */
 .list-group-item img {
   border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+/* nombre producto */
+.nombre-item {
+  flex: 1;
+  font-weight: 500;
+}
+
+/* precio */
+.precio-item {
+  font-weight: 600;
+}
+
+/* cantidad */
+.cantidad-item {
+  background: #f1f1f1;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* botón eliminar */
+.btn-eliminar {
+  border: none;
+  background: #dc3545;
+  color: white;
+  border-radius: 5px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background: #bb2d3b;
 }
 
 
@@ -163,14 +230,6 @@
   margin-top: 60px;
 }
 
-/* Logo "Nexus" - fuente, tamaño y color dorado */
-.footer-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  color: #f8c146;
-}
 
 /* Textos generales del footer (ej: "Tu tienda deportiva", "Síguenos") */
 .footer p {

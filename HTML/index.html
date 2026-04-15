@@ -17,30 +17,27 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg  py-4">
-        <div class="container">
-            <a class="navbar-brand fs-3" href="#">
-                <img src="../assets/nexusLogoWt.webp" alt="Logo Nexus" width="250" height="auto"
-                    class="d-inline-block align-text-top">
-                    <p class="mb-0">Tu tienda deportiva de confianza.</p>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
-                    class="navbar-toggler-icon"></span> </button>
-            <div class="collapse navbar-collapse justfy-content" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-3">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#carrito-section">🛒 Carrito</a>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg  py-4">
+            <div class="container">
+                <a class="navbar-brand fs-3" href="#"><img src="../assets/nexusLogoWt.webp" alt="Logo Nexus" width="250" height="auto" class="d-inline-block align-text-top"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justfy-content" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-3">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#carrito-section">🛒 Carrito <span id="cantidad" class="badge bg-warning text-dark">0</span></a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+    
 
 
     <section class="hero">
 
-        <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div id="carouselBanner" class="carousel-fa" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
@@ -49,7 +46,7 @@
 
                     <div class="banner-content">
                         <h1>Tienda Deportiva Nexus</h1>
-                        <p class="lema-banner">Equipamiento CrossFit y camisetas personalizadas</p>
+                        <p class="lema-banner">Todo para tu rendimiento deportivo</p>
                         <a href="#productos" class="btn-banner">Ver productos</a>
                     </div>
                 </div>
@@ -59,8 +56,8 @@
                     <div class="overlay"></div>
 
                     <div class="banner-content">
-                        <h1>Entrena como un atleta real</h1>
-                        <p class="lema-banner">Equipamiento resistente para cada WOD</p>
+                        <h1>Equípate para entrenar</h1>
+                        <p class="lema-banner">Ropa y accesorios para cada disciplina</p>
                         <a href="#productos" class="btn-banner">Ver productos</a>
                     </div>
                 </div>
@@ -70,8 +67,8 @@
                     <div class="overlay"></div>
 
                     <div class="banner-content">
-                        <h1>Equípate hoy</h1>
-                        <p class="lema-banner">Todo lo que necesitas para rendir al máximo</p>
+                        <h1>Supera tus límites</h1>
+                        <p class="lema-banner">Diseñado para acompañarte en cada entrenamiento</p>
                         <a href="#productos" class="btn-banner">Ver productos</a>
                     </div>
                 </div>
@@ -81,8 +78,8 @@
                     <div class="overlay"></div>
 
                     <div class="banner-content">
-                        <h1>Rompe tus límites</h1>
-                        <p class="lema-banner">Ropa y equipamiento diseñados para superar cada reto</p>
+                        <h1>Diseñado para acompañarte en cada entrenamiento</h1>
+                        <p class="lema-banner">Encuentra lo que necesitas para rendir mejor</p>
                         <a href="#productos" class="btn-banner">Ver productos</a>
                     </div>
                 </div>
@@ -92,55 +89,70 @@
 
     </section>
 
-    <div class="container text-center" id="productos">
-        <h2 class="text-center py-3 mb-5 titulo-productos">Conoce nuestros productos</h2>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
-                <div class="card" style="width: 12rem;">
-                    <img src="../assets/Protein.webp" class="card-img-top producto-img" alt="producto-1">
-                    <div class="card-body">
-                        <h5 class="card-title producto-nombre">Descripción Producto 1</h5>
-                        <p class="card-text producto-precio">$25.00</p>
-                        <button class="btn btn-primary agregar" data-nombre="Proteina Whey" data-precio="25" data-img="../assets/Protein.webp">Añadir a carrito</button>
+    <main>
+        <div class="container text-center" id="productos">
+            <h2 class="text-center py-3 mb-5 titulo-productos">Conoce nuestros productos</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+                    <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
+                    <div class="card h-100" style="width: 12rem;">
+                        <img src="../assets/Protein.webp" class="card-img-top producto-img" alt="producto-1">
+                        <div class="card-body">
+                            <h5 class="card-title producto-nombre">Combo suplementos deportivos marca RAW</h5>
+                            <p class="card-text producto-precio">$25.00</p>
+                            <button class="btn btn-primary agregar" data-nombre="Proteina Whey" data-precio="25" data-img="../assets/Protein.webp">Añadir a carrito</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
-                <div class="card" style="width: 12rem;">
-                    <img src="../assets/basket.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title producto-nombre">Descripción Producto 2</h5>
-                        <p class="card-text producto-precio">$10.00</p>
-                        <button class="btn btn-primary agregar"data-nombre="Balon Basket"data-precio="10"data-img="../assets/basket.webp">Añadir a carrito</button>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+                    <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
+                    <div class="card" style="width: 12rem;">
+                        <img src="../assets/basket.webp" class="card-img-top" alt="Spalding Varsity TF-150">
+                        <div class="card-body">
+                            <h5 class="card-title producto-nombre">Balón de baloncesto Spalding Varsity TF-150</h5>
+                            <p class="card-text producto-precio">$17.00</p>
+                            <button class="btn btn-primary agregar"data-nombre="Balon Basket"data-precio="10"data-img="../assets/basket.webp">Añadir a carrito</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
-                <div class="card" style="width: 12rem;">
-                    <img src="../assets/futbolGold.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title producto-nombre">Descripción Producto 3</h5>
-                        <p class="card-text producto-precio">$5.00</p>
-                        <button class="btn btn-primary agregar"data-nombre="Balon futbol Gold"data-precio="5"data-img="../assets/futbolGold.webp">Añadir a carrito</button>                    
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+                    <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
+                    <div class="card" style="width: 12rem;">
+                        <img src="../assets/futbolGold.webp" class="card-img-top" alt="Golty El Dorado Profesional">
+                        <div class="card-body">
+                            <h5 class="card-title producto-nombre">Balón de fútbol Golty El Dorado Profesional</h5>
+                            <p class="card-text producto-precio">$45.00</p>
+                            <button class="btn btn-primary agregar"data-nombre="Balon futbol Gold"data-precio="5"data-img="../assets/futbolGold.webp">Añadir a carrito</button>                    
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
-                <div class="card" style="width: 12rem;">
-                    <img src="../assets/futbolGrey.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title producto-nombre">Descripción Producto 4</h5>
-                        <p class="card-text producto-precio">$30.00</p>
-                        <button class="btn btn-primary agregar" data-nombre="Balon futbol Gris" data-precio="30" data-img="../assets/futbolGrey.webp">Añadir a carrito</button>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+                    <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
+                    <div class="card" style="width: 12rem;">
+                        <img src="../assets/futbolGrey.webp" class="card-img-top" alt="Golty Magnum Profesional">
+                        <div class="card-body">
+                            <h5 class="card-title producto-nombre">Balón de fútbol Golty Magnum Profesional</h5>
+                            <p class="card-text producto-precio">$30.00</p>
+                            <button class="btn btn-primary agregar" data-nombre="Balon futbol Gris" data-precio="30" data-img="../assets/futbolGrey.webp">Añadir a carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+                    <!-- !  Creamos CARD de PRODUCTOS A VENDER  -->
+                    <div class="card" style="width: 12rem;">
+                        <img src="../assets/personalizado1.webp" class="card-img-top" alt="Conjunto Deportivo "Gen.IO Innovate V1.1"">
+                        <div class="card-body">
+                            <h5 class="card-title producto-nombre">Conjunto Deportivo "Gen.IO Innovate V1.1" Diseño Personalizado</h5>
+                            <p class="card-text producto-precio">$45.00</p>
+                            <button class="btn btn-primary agregar" data-nombre="Conjunto Deportivo Gen.IO" data-precio="30" data-img="../assets/personalizado1.webp">Añadir a carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+
 
     <!-- ! SECCION CARRITO -->
     <section class="carrito">
@@ -151,21 +163,11 @@
                 <div class="col col-lg-2"></div>
 
                 <div class="col-md-auto">
-
-                    <h3 class="text-center py-3 mb-5 titulo-carrito">
-                        Carrito de compras
-                    </h3>
-
-                    <ol class="list-group list-group-numbered" id="lista-carrito">
-                        <!-- productos dinámicos -->
-                    </ol>
-
-                    <div class="mt-3">
-                        <h4>Total: $<span id="total-carrito">0.00</span></h4>
-                    </div>
+                    <h3 class="text-center py-3 mb-5 titulo-carrito">Carrito de compras</h3>
+                    <ol class="list-group list-group-numbered" id="lista-carrito"></ol>
+                    <div class="mt-3"><h4>Total: $<span id="total-carrito">0.00</span></h4></div>
 
                 </div>
-
                 <div class="col col-lg-2"></div>
 
             </div>
@@ -190,7 +192,7 @@
                     <p class="mb-0">Tu tienda deportiva de confianza.</p>
                 </div>
 
-                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
                     <ul class="list-unstyled mb-0">
                         <li><a href="#" class="footer-link">Inicio</a></li>
                         <li><a href="#productos" class="footer-link">Productos</a></li>
@@ -198,11 +200,11 @@
                     </ul>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 text-center text-md-start">
                     <p class="mb-1">Síguenos</p>
                     <div class="d-flex justify-content-center justify-content-md-start gap-3">
-                        <a href="#" class="footer-link">Instagram</a>
-                        <a href="#" class="footer-link">Facebook</a>
+                        <a href="https://www.instagram.com/" class="footer-link">Instagram</a>
+                        <a href="https://www.facebook.com/" class="footer-link">Facebook</a>
                     </div>
                 </div>
 
@@ -211,6 +213,7 @@
             <hr class="my-4">
 
             <div class="text-center">
+                <p class="mb-2">Equipo de desarrollo<br>Juan Quevedo | Cristian Ariza | Joan Triana | Lukas Muñoz</p>
                 <p class="mb-0">&copy; 2026 Nexus. Todos los derechos reservados.</p>
             </div>
         </div>
