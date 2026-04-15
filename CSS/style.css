@@ -1,0 +1,89 @@
+.navbar .nav-link {
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  transform: translateY(-2px);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.btn {
+    border-radius: 7px;
+    background-color: rgb(34, 32, 32);
+    color: #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.banner-content h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.lema-banner {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+
+.titulo-productos, .titulo-carrito {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 50px;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.hero .carousel-item {
+  /* height: 80vh; */
+  /* ! Temporal para visualizar la pantalla */
+  height: 20vh;
+
+}
+
+.hero .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+#lista-carrito {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.list-group-item img {
+    border-radius: 5px;
+}
+
+.btn-sm {
+    padding: 2px 8px;
+    font-size: 12px;
+}
