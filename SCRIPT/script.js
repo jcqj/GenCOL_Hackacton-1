@@ -44,13 +44,12 @@ botonesAgregar.forEach(boton => {
             "gap-3"
         );
 
-        li.innerHTML = `
-            <img src="${imagen}" width="40">
+        li.innerHTML = `<img src="${imagen}" width="40">
             <span class="nombre-item">${nombre}</span>
             <span>$<span class="precio-item">${precio}</span></span>
-            <span class="cantidad-item">1</span>
-        `;  
-                total.textContent = parseFloat(total.textContent) + parseFloat(precio);
+            <span class="cantidad-item">1</span>`;  
+        
+        total.textContent = parseFloat(total.textContent) + parseFloat(precio);
 
         const btnEliminar = document.createElement("button");
         btnEliminar.textContent = "X";
