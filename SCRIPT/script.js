@@ -141,9 +141,14 @@ function cargarCarrito() {
             "gap-3"
         );
 
+        // li.innerHTML = `<img src="${producto.imagen}" width="40">
+        //     <span class="nombre-item">${producto.nombre}</span>
+        //     <span>$<span class="precio-item">${producto.precio}</span></span>`;
+
         li.innerHTML = `<img src="${producto.imagen}" width="40">
             <span class="nombre-item">${producto.nombre}</span>
-            <span>$<span class="precio-item">${producto.precio}</span></span>`;
+            <span>$<span class="precio-item">${producto.precio}</span></span>
+            <span class="cantidad-item">${producto.cantidad}</span>`; 
 
         const btnEliminar = document.createElement("button");
         btnEliminar.textContent = "X";
@@ -164,7 +169,7 @@ function cargarCarrito() {
             total.textContent = parseFloat(total.textContent) - parseFloat(producto.precio);
 
             agregraProductos--;
-            // cantidad.textContent = agregraProductos;
+            cantidad.textContent = agregraProductos;
 
             // Guardamos después de eliminar
             guardarCarrito();
